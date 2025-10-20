@@ -11,7 +11,7 @@ I am adding a test sentence here at 13:24 on 03/12/24.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-Summarise the project set-up and design flow. Include a screenshot of your own set-up, for example see the image of my Project Summary window below. Guideline 1 short paragraph.
+In setting up this project, we had two source code given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had two files a Testbench.v and VGAColourStripes.v files, the VGASync.v, VGATop.v and Basys3_Master.xdc were taken from the ColourCycle source code. Once added we then went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSummary.png">
 
