@@ -9,7 +9,7 @@ Welcome to my System of Chip (SoC) Field Programable Gate Array (FPGA) project. 
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-In setting up this project, we had two source code given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had two files a Testbench.v and VGAColourStripes.v files, the VGASync.v, VGATop.v and Basys3_Master.xdc were taken from the ColourCycle source code. Once added we then went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz.
+In setting up this project, we had two source code that were given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had the following structure. In the design sources had a VGATop.v file and within it had a VGASync.v, VGAColourStripes.v, after the creation of the project we went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz. In the constraints folder had a Basys3_Master.xdc file, this holds the rules for the design (i.e what pins are being used for the FGPA). In the Simulation folder contained a Testbench.v and the VGATop.v like the one in the design sources.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSummary.png">
 
