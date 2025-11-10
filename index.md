@@ -1,4 +1,4 @@
-<img width="1294" height="679" alt="image" src="https://github.com/user-attachments/assets/0d4bfa6c-5789-4da5-a3be-baceb2594452" />---
+---
 layout: home
 title: FPGA VGA Driver Project
 tags: fpga vga verilog
