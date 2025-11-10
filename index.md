@@ -21,7 +21,9 @@ For this project we were given two templates to start with. First being the VGAC
 The second template we were given was the VGAColorStripes.v file. This used a series of if statements to check if the program was between a specific range of columns, then sets that range for a specific colour. This led to a series of columns with different colours depending on the range of pixels. (i.e black would be between 0 to 80 pixels, blue would be between 80 to 160 pixel). Unlike the previous example we were given, this display one single still image.
 
 ### **Simulation**
-Explain the simulation process. Reference any important details, include a well-selected screenshot of the simulation. Guideline: 1/2 short paragraphs.
+Once our project was set up, a simulation was run. The signals shown in the simulation were not actual full-scale, but a scaled-down versions to reduce the time needed to simulate it.
+
+Analysing the wave that was generated for us, we can see serveral signals such as clk, rst, h_sync, and v_sync. The clock is showing periodic pulses, the reset signal is active high, it is high at the start, then set to low for the remainder. The h_sync signal goes low more often then the v_sync signal. This is excepted because v_sync is set to low once the entire frame has been written, while h_sync is set to low at the end for each row. The row counter goes from 0 to 5 before repeating, instead of the full 0-479 confirms that we are using a scaled-down version of our simulation.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColorStripesSimulation.png">
 
