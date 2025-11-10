@@ -23,7 +23,9 @@ The second template we were given was the VGAColorStripes.v file. This used a se
 ### **Simulation**
 Once our project was set up, a simulation was run. The signals shown in the simulation were not actual full-scale, but a scaled-down versions to reduce the time needed to simulate it.
 
-Analysing the wave that was generated for us, we can see serveral signals such as clk, rst, h_sync, and v_sync. The clock is showing periodic pulses, the reset signal is active high, it is high at the start, then set to low for the remainder. The h_sync signal goes low more often then the v_sync signal. This is excepted because v_sync is set to low once the entire frame has been written, while h_sync is set to low at the end for each row. The row counter goes from 0 to 5 before repeating, instead of the full 0-479 confirms that we are using a scaled-down version of our simulation.
+Analysing the wave that was generated for us, we can see serveral signals such as clk, rst, h_sync, and v_sync. The clock is showing periodic pulses, the reset signal is active high, it is high at the start, then set to low for the remainder. The h_sync signal goes low more often then the v_sync signal. This is excepted because v_sync is set to low once the entire frame has been written, while h_sync is set to low at the end for each row. The row counter goes from 0 to 5 before repeating, instead of the full 0-479 confirms that we are using a scaled-down version of our simulation. The column signal appears more often then the rows, because for each row value, the columns count through their entire range of 0-640 before the row value is incremented.
+
+The colour signals are toggle between 0 and f, a combinations of these across the channels produce different colours. For example, when all three colours signals are f, the colour would be white and if all three colours signals are 0, then the colour would we black. Taking our screenshot at 74ns, only the red signal is f, meaning the colour red will be displayed. 
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColorStripesSimulation.png">
 
