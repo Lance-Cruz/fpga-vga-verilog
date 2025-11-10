@@ -1,4 +1,4 @@
----
+<img width="1294" height="679" alt="image" src="https://github.com/user-attachments/assets/0d4bfa6c-5789-4da5-a3be-baceb2594452" />---
 layout: home
 title: FPGA VGA Driver Project
 tags: fpga vga verilog
@@ -24,6 +24,14 @@ Explain the simulation process. Reference any important details, include a well-
 
 ### **Synthesis**
 Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Schematic.png">
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/SchematicCloseUp.png">
+
+
 ### **Demonstration**
 Perhaps add a picture of your demo. Guideline: 1/2 sentences.
 
