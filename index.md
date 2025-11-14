@@ -30,7 +30,9 @@ The colour signals are toggle between 0 and f, a combinations of these across th
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColorStripesSimulation.png">
 
 ### **Synthesis**
-Describe the synthesis and implementation processes. Consider including 1/2 useful screenshot(s). Guideline: 1/2 short paragraphs.
+The synthesis processes takes our code and converts it into a netlist, and then the implementaion processes produces a logical block schematic that shows how the components are arranged and routed.
+
+Below you can see synthesised design for the ColorStripes and the schematic which contains the logical blocks needed to implement the ColorStripes, including the clock, VGA sync, and the colour generation.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
 
