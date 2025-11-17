@@ -44,12 +44,13 @@ The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync s
 
 
 ### **Demonstration**
-Below is the output of our ColorStrippes.v, showing a series a colours in stripes based on the pixel range. 
+Below is the output of our ColorStripes.v, showing a series a colours in stripes based on the pixel range. 
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColourStripesDemo.png">
 
 ## **My VGA Design Edit**
-Introduce your own design idea. Consider how complex/achievabble this might be or otherwise. Reference any research you do online (use hyperlinks).
+After seeing the output of the colours stripes, that it was divided into eight sections and for each colour was 80 pixels, was where I got the idea to do a pixel art of an emoji. So my goal was to use the ColorStripes.v as a template and change it to make an pixel art image. The pixel art image for my design would be a 15x15 wherer I decided that one block would be a 10x10 pixels, resulting in a 150x150 image on my screen. Intially I decided to change the template to make a box outline to see how that would fit on the 640x480 display we have, but as see you can see from the image below, it was too small for my liking. So I decided to double my size, resulting in a 20x20 for one block, which lead to a 300x300 image.
+
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
 ### **Simulation**
