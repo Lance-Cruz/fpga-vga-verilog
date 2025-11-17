@@ -44,7 +44,7 @@ The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync s
 
 
 ### **Demonstration**
-Perhaps add a picture of your demo. Guideline: 1/2 sentences.
+Below is the output of our ColorStrippes.v, showing a series a colours in stripes based on the pixel range. 
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColourStripesDemo.png">
 
