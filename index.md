@@ -36,6 +36,8 @@ Below you can see synthesised design for the ColorStripes and the schematic whic
 
 The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync signals, the colour generation block (i_color_stripes) outputs the values for red, green, and blue, which is used to determine the visible color of the stripes on the display. For the outputs, buffers are used to represent each bit of the RGB, as well both hsync and vsync. The clock and reset inputs also pass through buffers. All blocks receive the same clock input for synchronization.
 
+#### Colour Stripes Synthesis and Implentation
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Schematic.png">
