@@ -53,9 +53,9 @@ Below is the output of our ColorStripes.v, showing a series a colours in stripes
 ## **My VGA Design Edit**
 After seeing the output of the colour stripes, which were divided into eight sections with each colour taking up 80 pixels, I got the idea to create a pixel art emoji. My goal was to use the ColorStripes.v template as a base and modify it to form the pixel art image.
 
-For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with.
+For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. I first did some calculation to get our box outline in the center of the screen by taking away 150 from both 640 and 480 and dividing it by 2, we would get the top left point of our box outline. To get the other 3 corner points just add 150 to the corresponding hsync and vsync values.
 
-
+[picture of 150x150 box outline]
 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
