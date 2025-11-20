@@ -51,7 +51,11 @@ Below is the output of our ColorStripes.v, showing a series a colours in stripes
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColourStripesDemo.png">
 
 ## **My VGA Design Edit**
-After seeing the output of the colours stripes, that it was divided into eight sections and for each colour was 80 pixels, was where I got the idea to do a pixel art of an emoji. So my goal was to use the ColorStripes.v as a template and change it to make an pixel art image. The pixel art image for my design would be a 15x15 wherer I decided that one block would be a 10x10 pixels, resulting in a 150x150 image on my screen. Intially I decided to change the template to make a box outline to see how that would fit on the 640x480 display we have, but as see you can see from the image below, it was too small for my liking. So I decided to double my size, resulting in a 20x20 for one block, which lead to a 300x300 image.
+After seeing the output of the colour stripes, which were divided into eight sections with each colour taking up 80 pixels, I got the idea to create a pixel art emoji. My goal was to use the ColorStripes.v template as a base and modify it to form the pixel art image.
+
+For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with.
+
+
 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
