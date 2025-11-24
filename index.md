@@ -69,6 +69,10 @@ At first viewing I didn't like the size as it felt too small for my liking. To i
 
 For my code adaptation I did the following, take for example the first row of my design which would be 90 to 110 rows. Then I would use the column variable ranging from 170 to 470 in increments of 20 to fill in with what colour I wanted it to be. The first row had the first 5 blocks as white, then the next 5 are black, and then the last 5 are white.
 
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCalc.jpg">
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCode.png">
+
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
 ### **Synthesis**
