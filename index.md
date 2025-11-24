@@ -81,13 +81,23 @@ Here is the first row of my design in code. The remaining fourteen rows will fol
 
 As you can see there is not many differences between my simulation and the one we did with the template, only thing to take note off is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur.
 
+[picture of simulation]
+
 ### **Synthesis**
 
-Like with our Simulation, our synthesis and implemention design has not changed. This is because for my design we have not added any additional registers or wires when doing our code adpatation, we just added a huge amount of conditional statements to make our image.
+For our synthesis and implentation, we can see a difference between this one and the one given to us by the template.
+
+[picture of synthesis/implementation]
+
+Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock like counters and syncs' are implemented with registers.
+
+[picture of close of synthesis/implementation]
 
 ### **Demonstration**
 
 Below is the various stages of my design up till completion.
+
+[progress of project pictures]
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
