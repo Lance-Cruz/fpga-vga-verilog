@@ -71,11 +71,11 @@ For my code adaptation I did the following, check if I'm in within a certain ran
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCalc.jpg">
 
-Here I calculated the what position and colours the first two rows of my design would be.
+Here I calculated the positions and colours of the first two rows of my design.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCode.png">
 
-Here is the first row of my design in code.
+Here is the first row of my design in code. The remaining fourteen rows will follow a similar format as the one shown above.
 
 ### **Simulation**
 Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
