@@ -78,11 +78,16 @@ Here I calculated the positions and colours of the first two rows of my design.
 Here is the first row of my design in code. The remaining fourteen rows will follow a similar format as the one shown above.
 
 ### **Simulation**
-Show how you simulated your own design. Are there any things to note? Demonstrate your understanding. Add a screenshot. Guideline: 1-2 short paragraphs.
+
+As you can see there is not many differences between my simulation and the one we did with the template, only thing to take note off is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur.
+
 ### **Synthesis**
-Describe the synthesis & implementation outputs for your design, are there any differences to that of the original design? Guideline 1-2 short paragraphs.
+
+Like with our Simulation, our synthesis and implemention design has not changed. This is because for my design we have not added any additional registers or wires when doing our code adpatation, we just added a huge amount of conditional statements to make our image.
+
 ### **Demonstration**
-If you get your own design working on the Basys3 board, take a picture! Guideline: 1-2 sentences.
+
+Below is the various stages of my design up till completion.
 
 ## **More Markdown Basics**
 This is a paragraph. Add an empty line to start a new paragraph.
