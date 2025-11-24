@@ -57,11 +57,11 @@ For my design, I chose to create a 15x15 grid, where each block in the grid woul
 
 [picture of calculations]
 
-[picture of 150x150 box outline]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/BoxOutline1.jpg">
 
 At first viewing I didn't like the size as it felt too small for my liking. To improve this, I decided to double the size of each block to 20x20 pixels, which would give me a larger outline that I was going for. This change increased the overall box size of 300x300 pixels, which looked a lot better in comparison to the screen.
 
-[picture of 300x300 box outline]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/BoxOutline2.jpg">
 
 ### **Code Adaptation**
 Briefly show how you changed the template code to display a different image. Demonstrate your understanding. Guideline: 1-2 short paragraphs.
