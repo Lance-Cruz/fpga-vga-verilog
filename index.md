@@ -81,17 +81,17 @@ Here is the first row of my design in code. The remaining fourteen rows will fol
 
 As you can see there is not many differences between my simulation and the one we did with the template, only thing to take note off is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur.
 
-[picture of simulation]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSimulation.png">
 
 ### **Synthesis**
 
 For our synthesis and implentation, we can see a difference between this one and the one given to us by the template.
 
-[picture of synthesis/implementation]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesis.png">
 
 Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock like counters and syncs' are implemented with registers.
 
-[picture of close of synthesis/implementation]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesisCloseUp.png">
 
 ### **Demonstration**
 
