@@ -11,8 +11,10 @@ Welcome to my System of Chip (SoC) Field Programable Gate Array (FPGA) project. 
 ### **Project Set-Up**
 In setting up this project, we had two source code that were given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had the following structure. In the design sources had a VGATop.v file and within it had a VGASync.v, VGAColourStripes.v, after the creation of the project we went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz. In the constraints folder had a Basys3_Master.xdc file, this holds the rules for the design (i.e what pins are being used for the FGPA). In the Simulation folder contained a Testbench.v and the VGATop.v like the one in the design sources.
 
+Project Summary
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSummary.png">
 
+Project Design, Constraint, and Sources files
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSources.png">
 
 ### **Template Code**
@@ -27,6 +29,7 @@ Analysing the wave that was generated for us, we can see serveral signals such a
 
 The colour signals are toggle between 0 and f, a combinations of these across the channels produce different colours. For example, when all three colours signals are f, the colour would be white and if all three colours signals are 0, then the colour would we black. Taking our screenshot at 74ns, only the red signal is f, meaning the colour red will be displayed. 
 
+Color Stripes Simulation
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColorStripesSimulation.png">
 
 ### **Synthesis**
@@ -38,16 +41,20 @@ The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync s
 
 #### Colour Stripes Synthesis and Implentation
 
+Colour Stripes Synthesis
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
 
+Colour Stripes Schematic
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Schematic.png">
 
+Colour Stripes Close up of Schematiic
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/SchematicCloseUp.png">
 
 
 ### **Demonstration**
-Below is the output of our ColorStripes.v, showing a series a colours in stripes based on the pixel range. 
+Below is the output of our ColorStripes.v, showing a series a colours in stripes based on the pixel range.
 
+Demonstration of Colour Stripes
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColourStripesDemo.png">
 
 ## **My VGA Design Edit**
@@ -97,14 +104,12 @@ Upon inspecting the new design we can see that there are various lookup tables a
 
 Below is the various stages of my design up till completion.
 
+Progress of the project with the first five rows.
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress1.jpg">
 
-Progress of the project with the first five rows.
-
+Progress of the project with ten rows implemented.
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress2.jpg">
 
-Progress of the project with ten rows implemented.
-
+Final version of the project.
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectFinish.jpg">
 
-Final version of the project.
