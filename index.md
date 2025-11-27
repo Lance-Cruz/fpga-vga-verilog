@@ -97,4 +97,8 @@ Upon inspecting the new design we can see that there are various lookup tables a
 
 Below is the various stages of my design up till completion.
 
-[progress of project pictures]
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress1.jpg">
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress2.jpg">
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectFinish.jpg">
