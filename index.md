@@ -87,6 +87,7 @@ Calculcations to get row one and two
 Here I calculated the positions and colours of the first two rows of my design.
 
 Code to simulate the first row
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCode.png">
 
 Here is the first row of my design in code. The remaining fourteen rows will follow a similar format as the one shown above.
@@ -103,11 +104,12 @@ Simulation of my design
 For our synthesis and implentation, we can see a difference between this one and the one given to us by the template.
 
 Synthesis of my design
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesis.png">
 
 Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock like counters and syncs' are implemented with registers.
 
-Close up view of my sythesis
+Close up view of my synthesis
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesisCloseUp.png">
 
 ### **Demonstration**
