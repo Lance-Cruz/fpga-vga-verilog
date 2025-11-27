@@ -42,6 +42,7 @@ The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync s
 #### Colour Stripes Synthesis and Implentation
 
 Colour Stripes Synthesis
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
 
 Colour Stripes Schematic
@@ -62,24 +63,30 @@ After seeing the output of the colour stripes, which were divided into eight sec
 
 For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. I first did some calculation to get our box outline in the center of the screen by taking away 150 from both 640 and 480 and dividing it by 2, we would get the top left point of our box outline. To get the other 3 corner points just add 150 to the corresponding hsync and vsync values.
 
+Calculation to achieve a 150x150 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Calculation150x150.jpg">
 
+Simulation of the 150x150 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/BoxOutline1.jpg">
 
 At first viewing I didn't like the size as it felt too small for my liking. To improve this, I decided to double the size of each block to 20x20 pixels, which would give me a larger outline that I was going for. This change increased the overall box size of 300x300 pixels, which looked a lot better in comparison to the screen.
 
+Calculation to achieve a 300x300 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Calculation300x300.jpg">
 
+Simulation of the 300x300 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/BoxOutline2.jpg">
 
 ### **Code Adaptation**
 
 For my code adaptation I did the following, check if I'm in within a certain range of rows and, then check the range of columns to fill in the colour. Take for example the first row of my design which would be at row 90 to 110. Then I would use the column variable that would range from 170 to 470 and in increments of 20 fill in with what colour I wanted it to be. The first row had the first 5 blocks as white, then the next 5 are black, and then the last 5 are white.
 
+Calculcations to get row one and two
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCalc.jpg">
 
 Here I calculated the positions and colours of the first two rows of my design.
 
+Code to simulate the first row
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCode.png">
 
 Here is the first row of my design in code. The remaining fourteen rows will follow a similar format as the one shown above.
@@ -88,16 +95,19 @@ Here is the first row of my design in code. The remaining fourteen rows will fol
 
 As you can see there is not many differences between my simulation and the one we did with the template, only thing to take note off is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur.
 
+Simulation of my design
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSimulation.png">
 
 ### **Synthesis**
 
 For our synthesis and implentation, we can see a difference between this one and the one given to us by the template.
 
+Synthesis of my design
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesis.png">
 
 Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock like counters and syncs' are implemented with registers.
 
+Close up view of my sythesis
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesisCloseUp.png">
 
 ### **Demonstration**
