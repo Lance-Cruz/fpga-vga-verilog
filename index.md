@@ -99,6 +99,12 @@ Below is the various stages of my design up till completion.
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress1.jpg">
 
+Progress of the project with the first five rows.
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress2.jpg">
 
+Progress of the project with ten rows implemented.
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectFinish.jpg">
+
+Final version of the project.
