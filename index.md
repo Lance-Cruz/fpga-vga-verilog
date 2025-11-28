@@ -18,6 +18,14 @@ Project Design, Constraint, and Sources files
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSources.png">
 
+VGATop Architecture Diagram
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGATopArchitecture%20.jpg">
+
+Testbench Architecture Diagram
+
+<img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/TestbenchArchitecture.jpg">
+
 ### **Template Code**
 For this project we were given two templates to start with. First being the VGAColorCycle.v file which uses a state machine logic to go through a series of colours. It uses twelve bits with four bits each being used to represent red, green, and blue (rgb), and set the rgb values to generate the colour. The code would use a counter to show a colour for a period of time and then switch to the next colour once the timer reached the maximum value. This would lead into a loop of colours displayed on a monitor.
 
