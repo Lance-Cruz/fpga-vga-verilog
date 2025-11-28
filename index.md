@@ -64,7 +64,7 @@ Demonstration of Colour Stripes
 ## **My VGA Design Edit**
 After seeing the output of the colour stripes, which were divided into eight sections with each colour taking up 80 pixels, I got the idea to create a pixel art emoji. My goal was to use the ColorStripes.v template as a base and modify it to form the pixel art image.
 
-For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. To position the box in the center of the screen, I did some quick calculations: I subtracted 150 from both the screen's width (640) and height (480), then divided the results by 2 to find the top-left corner of the box. By adding 150 to the hsync and vsync values, I was able to calculate the other three corners of the box outline.
+For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. To position the box in the center of the screen, I did some quick calculations, I subtracted 150 from both the screen's width (640) and height (480), then divided the results by 2 to find the top-left corner of the box. By adding 150 to the hsync and vsync values, I was able to calculate the other three corners of the box outline.
 
 Calculation to achieve a 150x150 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Calculation150x150.jpg">
@@ -82,12 +82,12 @@ Simulation of the 300x300 box
 
 ### **Code Adaptation**
 
-For my code adaptation I did the following, check if I'm in within a certain range of rows and, then check the range of columns to fill in the colour. Take for example the first row of my design which would be at row 90 to 110. Then I would use the column variable that would range from 170 to 470 and in increments of 20 fill in with what colour I wanted it to be. The first row had the first 5 blocks as white, then the next 5 are black, and then the last 5 are white.
+For my code adaptation I did the following, check if I'm in within a certain range of rows and, then check the range of columns to fill in the colour. Take for example the first row of my design, the row range would be from 90 to 110, and for the columns, I used a range from 170 to 470, with each block occupying 20 pixels. In the first row, the first 5 blocks were white, the next 5 were black, and the last 5 were white again. This pattern was repeated for each subsequent row.
 
 Calculcations to get row one and two
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/CodeAdaptCalc.jpg">
 
-Here I calculated the positions and colours of the first two rows of my design.
+Here I calculated the screen coordinates to get the position and colours for the first two rows.
 
 Code to simulate the first row
 
@@ -97,27 +97,27 @@ Here is the first row of my design in code. The remaining fourteen rows will fol
 
 ### **Simulation**
 
-As you can see there is not many differences between my simulation and the one we did with the template, only thing to take note off is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur.
+In terms of simulation, you can see there is not many differences between my simulation and the one we did with the template. The only thing to take note of is that our red, green, and blue are all f's which translate to the colour white. This is because our background is set to white and my image is position at the center of the screen. I would need to run my simulation for a very long time for a change to occur or place my image at the top left corner to see a change occur quicker.
 
 Simulation of my design
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSimulation.png">
 
 ### **Synthesis**
 
-For our synthesis and implentation, we can see a difference between this one and the one given to us by the template.
+When I ran the synthesis and implementation for my design, I noticed a clear difference between the synthesized netlist for my project and the original template.
 
 Synthesis of my design
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesis.png">
 
-Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock like counters and syncs' are implemented with registers.
+Upon inspecting the new design we can see that there are various lookup tables and registers implemented. This is because our smiley pixel-art emoji face logic is built from many conditional if/else statements, which is synthesizes using lookup tables, while the parts of the design that run with a clock, such as the counters and syncs are implemented with registers.
 
-Close up view of my synthesis
+Close-up view of my synthesis
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectVGADesignSynthesisCloseUp.png">
 
 ### **Demonstration**
 
-Below is the various stages of my design up till completion.
+Below are some screenshots of the projects progression, from the first few rows being filled in, to the completed design of the smiley face pixel art.
 
 Progress of the project with the first five rows.
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectProgress1.jpg">
