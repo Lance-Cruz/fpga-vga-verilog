@@ -15,6 +15,7 @@ Project Summary
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSummary.png">
 
 Project Design, Constraint, and Sources files
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSources.png">
 
 ### **Template Code**
@@ -39,16 +40,18 @@ Below you can see synthesised design for the ColorStripes and the schematic whic
 
 The VGA sync (u_vga_sync) block produces the horizontal sync and vertical sync signals, the colour generation block (i_color_stripes) outputs the values for red, green, and blue, which is used to determine the visible color of the stripes on the display. For the outputs, buffers are used to represent each bit of the RGB, as well both hsync and vsync. The clock and reset inputs also pass through buffers. All blocks receive the same clock input for synchronization.
 
-#### Colour Stripes Synthesis and Implentation
+#### Colour Stripes Synthesis and Implementation
 
 Colour Stripes Synthesis
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGASynthesis.png">
 
 Colour Stripes Schematic
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Schematic.png">
 
-Colour Stripes Close up of Schematiic
+Colour Stripes Close-up of Schematic
+
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/SchematicCloseUp.png">
 
 
@@ -61,7 +64,7 @@ Demonstration of Colour Stripes
 ## **My VGA Design Edit**
 After seeing the output of the colour stripes, which were divided into eight sections with each colour taking up 80 pixels, I got the idea to create a pixel art emoji. My goal was to use the ColorStripes.v template as a base and modify it to form the pixel art image.
 
-For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. I first did some calculation to get our box outline in the center of the screen by taking away 150 from both 640 and 480 and dividing it by 2, we would get the top left point of our box outline. To get the other 3 corner points just add 150 to the corresponding hsync and vsync values.
+For my design, I chose to create a 15x15 grid, where each block in the grid would represent a 10x10 pixel area. This resulted in a final image size of 150x150 pixels on my screen. Initially, I started by adjusting the template to form a box outline and check how it would fit on the 640x480 display we were working with. To position the box in the center of the screen, I did some quick calculations: I subtracted 150 from both the screen's width (640) and height (480), then divided the results by 2 to find the top-left corner of the box. By adding 150 to the hsync and vsync values, I was able to calculate the other three corners of the box outline.
 
 Calculation to achieve a 150x150 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Calculation150x150.jpg">
@@ -69,7 +72,7 @@ Calculation to achieve a 150x150 box
 Simulation of the 150x150 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/BoxOutline1.jpg">
 
-At first viewing I didn't like the size as it felt too small for my liking. To improve this, I decided to double the size of each block to 20x20 pixels, which would give me a larger outline that I was going for. This change increased the overall box size of 300x300 pixels, which looked a lot better in comparison to the screen.
+At first viewing, I didn't like the size as it felt too small for my liking. To improve this, I decided to double the size of each block from 10x10 to 20x20 pixels. This would give me a larger outline that I would have wanted. The result was a final box size of 300x300 pixels, which looked much better in comparison to the 640x480 screen resolution.
 
 Calculation to achieve a 300x300 box
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/Calculation300x300.jpg">
