@@ -18,6 +18,8 @@ Project Design, Constraint, and Sources files
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSources.png">
 
+Additionally, below there are architecture diagrams for both VGATop and the Testbench which show a high-level structure of the design and how certain modules interact with each other to generate the output signals.
+
 VGATop Architecture Diagram
 
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGATopArchitecture%20.jpg">
