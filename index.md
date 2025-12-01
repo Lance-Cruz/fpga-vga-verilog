@@ -142,7 +142,7 @@ Final version of the project.
 
 [1] Digilent, Basys 3 Reference [Online] Available: https://digilent.com/reference/programmable-logic/basys-3/reference-manual
 
-[2] Diligent Reference, "What is a Constraints file?" [Online] Available: https://digilent.com/reference/programmable-logic/guides/vivado-xdc-file
+[2] Digilent Reference, "What is a Constraints file?" [Online] Available: https://digilent.com/reference/programmable-logic/guides/vivado-xdc-file
 
 [3] M. Lynch, “System on Chip”, Lecture, ATU, Galway, 2025.
 
