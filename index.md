@@ -5,11 +5,11 @@ tags: fpga vga verilog
 categories: demo
 ---
 
-Welcome to my System of Chip (SoC) Field Programable Gate Array (FPGA) project. Here is where I blogged the timeline of my project to the lead up of my final work.
+Welcome to my System on Chip (SoC) Field-Programmable Gate Array (FPGA) project, where I used an Artix-7 Basys 3 FPGA board [1]. Here is where I blogged the timeline of my project to the lead up of my final work.
 
 ## **Template VGA Design**
 ### **Project Set-Up**
-In setting up this project, we had two source code that were given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had the following structure. In the design sources had a VGATop.v file and within it had a VGASync.v, VGAColourStripes.v, after the creation of the project we went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz. In the constraints folder had a Basys3_Master.xdc file, this holds the rules for the design (i.e what pins are being used for the FGPA). In the Simulation folder contained a Testbench.v and the VGATop.v like the one in the design sources.
+In setting up this project, we had two source code that were given to us to work with, one being a Colour Cycle and another a Stripes. The one I used below was the VGAStripes source code, which had the following structure. In the design sources had a VGATop.v file and within it had a VGASync.v, VGAColourStripes.v, after the creation of the project we went to the IP catalog to find a clock wizard which allows us to run the project at 25MHz. In the constraints folder had a Basys3_Master.xdc file, this holds the rules for the design [2] (i.e what pins are being used for the FGPA). In the Simulation folder contained a Testbench.v and the VGATop.v like the one in the design sources.
 
 Project Summary
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/VGAProjectSummary.png">
@@ -29,7 +29,7 @@ Testbench Architecture Diagram
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/TestbenchArchitecture.jpg">
 
 ### **Template Code**
-For this project we were given two templates to start with. First being the VGAColorCycle.v file which uses a state machine logic to go through a series of colours. It uses twelve bits with four bits each being used to represent red, green, and blue (rgb), and set the rgb values to generate the colour. The code would use a counter to show a colour for a period of time and then switch to the next colour once the timer reached the maximum value. This would lead into a loop of colours displayed on a monitor.
+For this project we were given two templates to start with[3]. First being the VGAColorCycle.v file which uses a state machine logic to go through a series of colours. It uses twelve bits with four bits each being used to represent red, green, and blue (rgb), and set the rgb values to generate the colour. The code would use a counter to show a colour for a period of time and then switch to the next colour once the timer reached the maximum value. This would lead into a loop of colours displayed on a monitor.
 
 The second template we were given was the VGAColorStripes.v file. This used a series of if statements to check if the program was between a specific range of columns, then sets that range for a specific colour. This led to a series of columns with different colours depending on the range of pixels. (i.e black would be between 0 to 80 pixels, blue would be between 80 to 160 pixel). Unlike the previous example we were given, this display one single still image.
 
@@ -44,7 +44,7 @@ Color Stripes Simulation
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ColorStripesSimulation.png">
 
 ### **Synthesis**
-The synthesis processes takes our code and converts it into a netlist, and then the implementaion processes produces a logical block schematic that shows how the components are arranged and routed.
+The synthesis processes takes our code and converts it into a netlist, and then the implementaion processes produces a logical block schematic that shows how the components are arranged and routed [4].
 
 Below you can see synthesised design for the ColorStripes and the schematic which contains the logical blocks needed to implement the ColorStripes, including the clock, VGA sync, and the colour generation.
 
@@ -138,3 +138,12 @@ Progress of the project with ten rows implemented.
 Final version of the project.
 <img src="https://raw.githubusercontent.com/Lance-Cruz/fpga-vga-verilog/main/docs/assets/images/ProjectFinish.jpg">
 
+## **References**
+
+[1] Digilent, Basys 3 Reference [Online] Available: https://digilent.com/reference/programmable-logic/basys-3/reference-manual
+
+[2] Diligent Reference, "What is a Constraints file?" [Online] Available:https://digilent.com/reference/programmable-logic/guides/vivado-xdc-file
+
+[3] M. Lynch, “System on Chip”, Lecture, ATU, Galway, 2025.
+
+[4] AMD, "The difference between Implementation and Synthesis", [Online] Available:https://adaptivesupport.amd.com/s/question/0D52E00006hpkc2SAA/the-difference-between-implementation-and-synthesize?language=en_US
